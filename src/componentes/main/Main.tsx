@@ -1,4 +1,4 @@
-import Filme from '../filme/Filme1'
+import Filme from '../filme/Filme'
 import './Main.css'
 export default function Main(){
     return(
