@@ -1,9 +1,9 @@
 import './Header.css'
 function Header(){
-    const texto = "Elisamaya"
-    function mudaTexto(){
-        texto = "Elisamaya"
-    }
+    // let texto = "Elisamaya"
+    // function mudaTexto(){
+    //     texto = "Elisamaya"
+    // }
     return(
         <>
         <header>
@@ -32,7 +32,7 @@ function Header(){
         </header>
         <div>
             pesquisa
-            <p className='texto_digitado' >pesquisa: {texto}</p>
+            {/* <p className='texto_digitado' >pesquisa: {texto}</p> */}
         </div>
         </>
     )
