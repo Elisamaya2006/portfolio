@@ -17,3 +17,9 @@ header nav ul{
     list-style: none;
     gap: 15px;
 }
+
+.barradepesquisa{
+    height: 30px;
+    border: 11px solid #f0f0f0;
+    width: 200px;
+}
