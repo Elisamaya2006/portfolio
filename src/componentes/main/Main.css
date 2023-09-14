@@ -1,12 +1,25 @@
 .content-main{
     padding: 50px;
     display: grid;
-    grid-template-columns: repeat(5,1fr);
+    grid-template-columns: repeat(4,1fr);
     justify-content: center;
-    gap: 30px;
+    column-gap: 30px;
     row-gap: 30px;
 
     /* gap: 30px;
     flex-wrap: wrap;
     justify-content: center; */
+}
+.barrapesquisa{
+    height: 30px;
+    border: 1px solid #bebebe;
+    width: 200px;
+    border-radius: 5px;
+    font-size: 1.4rem;
+}
+.barrapesquisa:focus-visible{
+    outline: 1px solid rgba(28, 28, 191, 0.57);
+}
+.pesquisa{
+    padding: 50px;
 }

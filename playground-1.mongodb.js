@@ -1,60 +1,67 @@
-// // const collection = 'NEW_COLLECTION_NAME';
+//Código para criar uma nova collection
+use("patissier");
+db.dropDatabase()
+use("patissier");
+db.createCollection("cake");
 
-// //CREATE DATABASE TEST
-// //USE TEST
-// use("test");
-// //Apagando a collection antes de inserir novos dados.
-// db.cardapio.drop();
+//Inserindo dados
+db.cake.insertOne(
+    {_id:1,
+        nome:"Bolo de Cenoura",
+        peso:"1kg", 
+        preco:60.00,
+        ingredientes:"cenouras, ovos, oleo, acucar, farinha de trigo, fermento em pó"}
+);
+db.cake.insertOne(
+    {_id:2,
+        nome:"Bolo de Chocolate",
+        peso:"1.800kg", 
+        preco:45.00,
+        ingredientes:"achocolatado em pó, ovos, oleo, acucar, farinha de trigo, fermento em pó"}
+);
+db.cake.insertOne(
+    {_id:3,
+        nome:"Red Velvet",
+        peso:"2.800kg", 
+        preco:180.00,
+        ingredientes:"corante vermelho, ovos, manteiga, acucar, farinha de trigo, fermento em pó"}
+);
+db.cake.insertOne(
+    {_id:4,
+        nome:"Bolo de Limão",
+        peso:"2kg", 
+        preco:69.00,
+        ingredientes:"achocolatado em pó, ovos, oleo, acucar, farinha de trigo, fermento em pó"}
+);
 
-// //Código para criar uma nova collection
-// db.createCollection("cardapio");
 
-// //Código para inserir vários dados em uma collection criada anteriormente
-// db.cardapio.insertMany([
-//     {nome:"Macarrão",preco:29.99,ingredientes:"Macarrão"},
-//     {nome:"Strogonoff",preco:59.99,ingredientes:"Carne Wagyu e Arroz"},
-//     {nome:"Pirão",preco:50,ingredientes:"Farinha, Frango Caipira, Arroz"},
-//     {nome:"Rozcowvo",preco:29.99,ingredientes:"Ovo, Arroz, Feijão"},
-//     {nome:"Prato do Dia",preco:10.99,ingredientes:"Arroz, Feijão e Bife"}
-// ])
+//Excluindo o document cake com _id = 1
+db.cake.deleteOne({_id: 1});
 
-// //SELECT * FROM test.cardapio;
+//Listando o nome e o preço de todos os bolos
+db.cake.find({}, 
+    {nome: "Bolo de Cenoura", preco: 60.00});
+db.cake.find({}, 
+    {nome: "Bolo de Chocolate", preco: 45.00});
+db.cake.find({}, 
+    {nome: "Red Velvet", preco: 180.00});
+db.cake.find({}, 
+    {nome: "Bolo de Limão", preco: 69.00});
+db.cake.find({},
+    {nome: "Bolo de Morango", preco: 142.50});
 
-// //No mongo para selecionar vamos usar o comando find
+//Listando nome e o preço de todos os bolos com o preço menor ou igual a 70
+db.cake.find({preco: { $lte: 70 }}, {nome: "Bolo de Cenoura", preco: 60.00});
+db.cake.find({preco: { $lte: 70 }}, {nome: "Bolo de Chocolate", preco: 45.00});
+db.cake.find({preco: { $lte: 70 }}, {nome: "Red Velvet", preco: 180.00});
+db.cake.find({preco: { $lte: 70 }}, {nome: "bolo de Limão", preco: 69.00});
+db.cake.find({preco: { $lte: 70 }}, {nome: "Bolo de Morango", preco: 142.50});
 
-// //devolve todos os dados da collection
-// db.cardapio.find();
-
-// //Filtrando pelo nome
-// //SELECT * FROM cardapio where nome="Macarrão"; 
-// db.cardapio.find({nome:"Macarrão"});
-
-// //Para selecionar as colunas usamos a projeção
-// //SELECT nome, preco FROM cardapio where nome="Macarrão"; 
-// db.cardapio.find({nome:"Macarrão"},{nome:true,preco:true});
-
-// //FIND ({QUERY},{PROJEÇÃO})
-
-use("teretreino");
-db.treino.insertOne(
-    {
-        nome:"Peito e Biceps",
-        diaSemana:"Segunda",
-        exercicios:[
-            {
-                
-                nome:"Rosca Scott",
-                serie:5,
-                repeticoes:12
-            },
-            
-        ]
+//Consulta que muda o nome, peso e acrescenta 1 ingrediente no bolo _id = 2. (Usando update)
+db.cake.updateOne({_id: 2}), {
+    $set: {
+        
     }
-)
-use("teretreino");
-db.treino.find({_id:ObjectId ("64f8c02565059e522f04cd17")})
+}
 
-use("teretreino");
-db.treino.updateOne(
-    {_id:ObjectId ("64f741c7c86afd16041f907f"), "nome":"Rosca Scott"},)
-
+//Código para criar update modificando 1 ingrediente de um bolo para ovos e quantidade = "3 unidades"

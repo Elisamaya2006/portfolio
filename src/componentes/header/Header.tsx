@@ -1,20 +1,12 @@
 import './Header.css'
 function Header(){
-    // let texto = "Elisamaya"
-    // function mudaTexto(){
-    //     texto = "Elisamaya"
-    // }
     return(
-        <>
         <header>
             <div>
                 logo
             </div>
             <nav>
                 <ul>
-                    <li>
-                        <input className="barradepesquisa" type="text" />
-                    </li>
                     <li>
                         <a href="#">Página inicial</a>
                     </li>
@@ -30,11 +22,6 @@ function Header(){
                 </ul>
             </nav>
         </header>
-        <div>
-            pesquisa
-            {/* <p className='texto_digitado' >pesquisa: {texto}</p> */}
-        </div>
-        </>
     )
 }
 export default Header
