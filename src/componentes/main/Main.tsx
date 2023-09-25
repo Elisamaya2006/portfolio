@@ -5,21 +5,21 @@ export default function Main() {
       <section className="hero">
         <h4><p>MEUS PROJETOS DE FOTOGRAFIAS - 2023 PHENOMENAL PHOTOGRAPHY WORDPRESS BLOG BY ELISAMAYA REIS 💗</p></h4>
         <img src="/elisamayareis.png"/>
-        <img src="img/Ins54514612820_ba8ab4a548ed4860b704960f19f3ce9a_328045783_947029660008761_6161590070680278428_n.jpg"></img>
-        <img src="img/LPR_20220812170234.jpg"></img>
-        <img src="img/IMG-20220722-WA0009.jpg"></img>
-        <img src="img/LPR_20220812170004.jpg"></img>
-        <img src="img/IMG-20220722-WA0011.jpg"></img>
-        <img src="img/LPR_20220812170434 (1).jpg"></img>
-        <img src="img/1998CAM_2023_09_20_14_21_28_FN.jpg"></img>
-        <img src="img/1998CAM_2023_09_20_14_22_49_FN.jpg"></img>
-        <img src="img/1998CAM_2023_09_20_14_42_55_FN.jpg"></img>
-        <img src="img/IMG-20220722-WA0016.jpg"></img>
-        <img src="img/LPR_20220812170324.jpg"></img>
-        <img src="img/IMG-20220722-WA0021.jpg"></img>
-        <img src="img/1998CAM_2023_09_20_15_27_59_FN.jpg"></img>
-        <img src="img/LPR_20220812165145.jpg"></img>
-        <img src="img/LPR_20220810181608.jpg"></img>
+        <img src="img/Ins54514612820_ba8ab4a548ed4860b704960f19f3ce9a_328045783_947029660008761_6161590070680278428_n.jpg"/>
+        <img src="img/LPR_20220812170234.jpg"/>
+        <img src="img/IMG-20220722-WA0009.jpg"/>
+        <img src="img/LPR_20220812170004.jpg"/>
+        <img src="img/IMG-20220722-WA0011.jpg"/>
+        <img src="img/LPR_20220812170434 (1).jpg"/>
+        <img src="img/1998CAM_2023_09_20_14_21_28_FN.jpg"/>
+        <img src="img/1998CAM_2023_09_20_14_22_49_FN.jpg"/>
+        <img src="img/1998CAM_2023_09_20_14_42_55_FN.jpg"/>
+        <img src="img/IMG-20220722-WA0016.jpg"/>
+        <img src="img/LPR_20220812170324.jpg"/>
+        <img src="img/IMG-20220722-WA0021.jpg"/>
+        <img src="img/1998CAM_2023_09_20_15_27_59_FN.jpg"/>
+        <img src="img/LPR_20220812165145.jpg"/>
+        <img src="img/LPR_20220810181608.jpg"/>
         <h2>Sobre Mim</h2>
         <p>Meu nome é Elisamaya e significa alguém que é  ''alegre'' e também ''ilusão''.</p>
         <p>Meus pais escolheram esse nome, pois minha avó se chamava 'Eliza', como homenagem à ela.</p>
