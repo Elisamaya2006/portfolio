@@ -1,25 +1,75 @@
-.content-main{
-    padding: 50px;
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    justify-content: center;
-    column-gap: 30px;
-    row-gap: 30px;
+body {
+    font-family: Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+}
 
-    /* gap: 30px;
+h1{
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+}
+
+h4{
+    font-family: Impact, sans-serif;
+    font-size:35.5px;
+    color: #d3b6ff
+}
+
+p{
+    text-align: center;
+}
+
+main h2{
+    color: #8a3d3d;
+}
+
+img {
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+.image-container img {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
-    justify-content: center; */
+    text-align: center;
 }
-.barrapesquisa{
-    height: 30px;
-    border: 1px solid #bebebe;
-    width: 200px;
-    border-radius: 5px;
-    font-size: 1.4rem;
+
+.contact h2 {
+    font-size: 24px;
 }
-.barrapesquisa:focus-visible{
-    outline: 1px solid rgba(28, 28, 191, 0.57);
+
+.contact input,
+.contact textarea {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 300px;
 }
-.pesquisa{
-    padding: 50px;
+
+.contact button {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.sticky-button {
+    position: absolute;
+    top: 45px;
+    right: 20px;
+    background-color: #008B8B;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    z-index: 99;
 }

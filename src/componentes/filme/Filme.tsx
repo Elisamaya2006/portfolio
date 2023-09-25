@@ -1,15 +1,15 @@
-import './Filme.css'
+import './Main.css'
 
-type FilmeProps={
+type MainProps={
     titulo:string,
     sinopse:string,
     imagem:string
 }
 
-export default function Filme(props:FilmeProps){
+export default function Main(props:MainProps){
     return(
         <div className="filme_content">
-            <div className="foto_filme"></div>
+            <div className="foto_main"></div>
             <img src={props.imagem} alt=""/>
             <div className="texto_foto">
                 <h1>{props.titulo}</h1>

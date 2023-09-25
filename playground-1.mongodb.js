@@ -10,28 +10,28 @@ db.cake.insertOne(
         nome:"Bolo de Cenoura",
         peso:"1kg", 
         preco:60.00,
-        ingredientes:"cenouras, ovos, oleo, acucar, farinha de trigo, fermento em pó"}
+        ingredientes:"cenouras, ovos, oleo, açucar, farinha de trigo, fermento em pó"}
 );
 db.cake.insertOne(
     {_id:2,
         nome:"Bolo de Chocolate",
         peso:"1.800kg", 
         preco:45.00,
-        ingredientes:"achocolatado em pó, ovos, oleo, acucar, farinha de trigo, fermento em pó"}
+        ingredientes:"achocolatado em pó, ovos, oleo, açucar, farinha de trigo, fermento em pó"}
 );
 db.cake.insertOne(
     {_id:3,
         nome:"Red Velvet",
         peso:"2.800kg", 
         preco:180.00,
-        ingredientes:"corante vermelho, ovos, manteiga, acucar, farinha de trigo, fermento em pó"}
+        ingredientes:"corante vermelho, ovos, manteiga, açucar, farinha de trigo, fermento em pó"}
 );
 db.cake.insertOne(
     {_id:4,
         nome:"Bolo de Limão",
         peso:"2kg", 
         preco:69.00,
-        ingredientes:"achocolatado em pó, ovos, oleo, acucar, farinha de trigo, fermento em pó"}
+        ingredientes:"achocolatado em pó, ovos, oleo, açucar, farinha de trigo, fermento em pó"}
 );
 
 
@@ -58,10 +58,26 @@ db.cake.find({preco: { $lte: 70 }}, {nome: "bolo de Limão", preco: 69.00});
 db.cake.find({preco: { $lte: 70 }}, {nome: "Bolo de Morango", preco: 142.50});
 
 //Consulta que muda o nome, peso e acrescenta 1 ingrediente no bolo _id = 2. (Usando update)
-db.cake.updateOne({_id: 2}), {
-    $set: {
-        
+db.cakes.updateOne({_id: 2},{
+    $set:{
+        nome: "Bolo de Chocolate",
+        peso: "1.800kg",
+        ingredientes:{
+            ...this.ingredientes,
+            "ovos": 10
+        }
     }
-}
+});
 
 //Código para criar update modificando 1 ingrediente de um bolo para ovos e quantidade = "3 unidades"
+db.cakes.updateOne({_id: 2},{
+    $set:{
+        ingredientes:{
+            "ovos":{
+                $set:{
+                    quantidade: "3"
+                }
+            }
+        }
+    }
+});

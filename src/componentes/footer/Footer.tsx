@@ -1,10 +1,10 @@
 import './Footer.css'
-import Logo from '../../assets/pngfind.com-barbie-logo-png-667657.png'
+// import Logo from '../../assets/'
 function Footer(){
-    return(
-        <footer>
-            <img src={Logo} alt="" />
-        </footer>
-    )
+  return(
+    <footer>
+            <p>Todos os direitos reservados. &copy; 2023 Elisamaya Reis.</p>
+    </footer>
+  )
 }
 export default Footer

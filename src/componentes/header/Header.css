@@ -1,25 +1,50 @@
-header{
-    background-color: pink;
+header {
+    background-color: #ffb6c1;
     display: flex;
     justify-content: space-between;
     padding: 20px 10vw;
     align-items: center;
 }
 
-header nav ul li a{
-    text-decoration: none;
+header nav ul li a {
+    background-color: #ffb6c1;
+    text-decoration:none;
     padding: 15px;
-    border: 1px solid hotpink;
+    border: 2px solid #FFCB;
     color: white;
 }
-header nav ul{
+
+header nav ul {
     display: flex;
     list-style: none;
-    gap: 15px;
+    gap:10px;
 }
 
-.barradepesquisa{
-    height: 30px;
-    border: 11px solid #f0f0f0;
-    width: 200px;
+main h1 {
+    font-family: Verdana, Tahoma, sans-serif;
+    color:#8a3d3d;
+}
+
+.cta-button nav {
+    border: 2px solid #FFCB;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Times;
+    font-size: 18px;
+    padding: 16px 21px;
+    text-decoration: none;
+    text-shadow: 0px 0px 7px #3d768a;
+}
+
+.sticky-button {
+    position: absolute;
+    top: 45px;
+    right: 20px;
+    background-color: #008B8B;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    z-index: 99;
 }
