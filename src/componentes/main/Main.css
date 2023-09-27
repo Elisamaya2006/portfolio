@@ -2,13 +2,20 @@ body {
     font-family: Tahoma, sans-serif;
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
 h1{
     text-align: center;
+    align-items: center;
 }
 
 h2{
+    text-align: center;
+}
+
+p{
+    align-items: center;
     text-align: center;
 }
 
@@ -18,19 +25,47 @@ h4{
     color: #d3b6ff
 }
 
+h6 {
+    text-align: center;
+    align-items: center;
+    color: #f2b2b2;
+    font-size: 25px;
+}
+
+.barrapesquisa{
+    height: 30px;
+    border: 1px solid #bebebe;
+    width: 200px;
+    border-radius: 5px;
+    font-size: 1.4rem;
+}
+.barrapesquisa:focus-visible{
+    outline: 1px solid #d3b6ff;
+}
+.pesquisa{
+    padding: 50px;
+}
+
 p{
     text-align: center;
 }
 
 main h2{
     color: #8a3d3d;
+    align-items: center;
+    text-align: center;
+}
+
+h2{
+    color:#8a3d3d;
 }
 
 img {
     margin: 10px;
     padding: 10px;
-    text-align: center;
+    margin-top: 100px;
     align-items: center;
+    text-align: center;
 }
 
 .image-container img {
@@ -38,12 +73,16 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
     text-align: center;
 }
 
 .contact h2 {
     font-size: 24px;
+}
+
+.sinopse {
+    align-items: center;
+    text-align: center;
 }
 
 .contact input,
@@ -72,4 +111,13 @@ img {
     border: none;
     cursor: pointer;
     z-index: 99;
+}
+
+.content-main{
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-content: center;
+    column-gap: 30px;
+    row-gap: 30px;
 }
