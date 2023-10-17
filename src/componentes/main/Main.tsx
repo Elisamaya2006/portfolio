@@ -25,7 +25,7 @@ export default function Main() {
     {
       id:3,
       titulo:"Em Sintonia com a Natureza",
-      sinopse:"Nesta foto, minha amiga está de pé ao lado de um lago tranquilo. As cores vibrantes do céu refletem-se em seu rosto, criando um cenário mágico. A imagem apresneta  tons de vermelho, verde e azul. A expressão de admiração e fascínio em seu rosto revela o encanto que ela sente ao testemunhar essa maravilha da natureza. É um momento de paz e contemplação, onde o tempo parece parar.",
+      sinopse:"Nesta foto, minha amiga está de pé ao lado de um lago tranquilo. As cores vibrantes do céu refletem-se em seu rosto, criando um cenário mágico. A imagem apresenta  tons de vermelho, verde e azul. A expressão de admiração e fascínio em seu rosto revela o encanto que ela sente ao testemunhar essa maravilha da natureza. É um momento de paz e contemplação, onde o tempo parece parar.",
       imagem:"/img/IMG-20220722-WA0009.jpg"
     },
     {
@@ -85,7 +85,7 @@ export default function Main() {
   },
   {
     id:13,
-      titulo:"Entre Arvores ",
+      titulo:"Entre Árvores ",
       sinopse:"Nesta foto, minha amiga está de pé em um parque cercada por árvores majestosas. O sol brilha suavemente através das folhas, criando uma atmosfera mágica ao seu redor. Ela está usando um vestido claro e florido, que combina perfeitamente com o ambiente natural ao seu redor. Seu sorriso radiante e olhar encantado mostram o quanto ela está imersa na beleza da natureza.",
       imagem:"/img/LPR_20220812165145.jpg"
   },
@@ -95,8 +95,21 @@ export default function Main() {
       sinopse:"Nesta foto, minha amiga segura um buquê de flores com carinho. Seu sorriso transborda felicidade e amor, enquanto ela sente a textura das pétalas delicadas em suas mãos. O colorido das flores contrasta com a simplicidade do momento, representando a beleza das pequenas coisas que podem alegrar o coração.",
       imagem:"/img/LPR_20220810181608.jpg"
   },
+  {
+    id:15,
+      titulo:"O Amor em suas mãos",
+      sinopse:"Nesta foto, minha amiga segura um buquê de flores com carinho. Seu sorriso transborda felicidade e amor, enquanto ela sente a textura das pétalas delicadas em suas mãos. O colorido das flores contrasta com a simplicidade do momento, representando a beleza das pequenas coisas que podem alegrar o coração.",
+      imagem:"IMG-20220722-WA0043.jpg"
+  },
+  {
+    id:16,
+      titulo:"O Amor em suas mãos",
+      sinopse:"Nesta foto, minha amiga segura um buquê de flores com carinho. Seu sorriso transborda felicidade e amor, enquanto ela sente a textura das pétalas delicadas em suas mãos. O colorido das flores contrasta com a simplicidade do momento, representando a beleza das pequenas coisas que podem alegrar o coração.",
+      imagem:"20220722_083857 (2).jpg"
+  },
 
 ]
+
 function mudaTexto(e:React.ChangeEvent<HTMLInputElement>){
   console.log(e.target.value)
   setTexto(e.target.value)
@@ -111,7 +124,7 @@ function mudaTexto(e:React.ChangeEvent<HTMLInputElement>){
         <p>Meus pais escolheram esse nome, pois minha avó se chamava 'Eliza', como homenagem à ela.</p>
         <p>Tenho um pouco de cada personalidade de minha mãe e irmã. Minha irmã ama cozinhar e minha mãe ama assistir filmes.</p>
         <p>Hoje em dia não trabalho, mas apenas estudo e pretendo trabalhar como designer!</p>
-        <p>Pesquise projetos:</p>
+        <h2>Pesquise projetos:</h2>
         <input className='barrapesquisa' type="text" onChange={mudaTexto}/>
         </section>
 
@@ -126,6 +139,18 @@ function mudaTexto(e:React.ChangeEvent<HTMLInputElement>){
                     />
                     )
                 }
+
+<main className='form-main'>
+  <h5>Entre em Contato</h5>
+  <form>
+  <input className='Nome' type="text" placeholder='Nome'/>
+  <input className="Email" type="text" placeholder="Email"/>
+  <textarea placeholder="Mensagem"/>
+  <button type="submit">Enviar
+  </button>
+  </form>
+  </main>
+
       </main>
     </>
   );

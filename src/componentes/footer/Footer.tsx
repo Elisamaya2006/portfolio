@@ -10,6 +10,8 @@ function Footer(){
         <p>Nossos ensaios são criados para todas as pessoas, enfatizando a importância de se sentir confiante e confortável em frente as câmeras. 📸	
 </p>
             <p>Todos os direitos reservados. &copy; 2023 Elisamaya Reis.</p>
+      <div>
+      </div>
     </footer>
   )
 }

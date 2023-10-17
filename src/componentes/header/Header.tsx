@@ -28,9 +28,9 @@ function Header() {
       <a href="#" type="cta-button"></a>
       <button className="sticky-button">☰</button>
       <div>
-      <a href="https://www.facebook.com/StarCorreia">Facebook</a>
-          <a href="https://www.instagram.com/elisamayareis">Instagram</a>
-          <a href="https://www.twitter.com/correia_star">Twitter</a>
+      <a href="https://www.facebook.com/StarCorreia">Facebook </a>
+          <a href="https://www.instagram.com/elisamayareis">Instagram </a>
+          <a href="https://www.twitter.com/correia_star">Twitter </a>
           </div>
     </header>
   );

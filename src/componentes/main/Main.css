@@ -60,6 +60,12 @@ h2{
     color:#8a3d3d;
 }
 
+h5{
+    color:#8a3d3d;
+    font-size: 55px;
+
+}
+
 img {
     margin: 10px;
     padding: 10px;
@@ -76,7 +82,7 @@ img {
     text-align: center;
 }
 
-.contact h2 {
+.contact h2{
     font-size: 24px;
 }
 
@@ -85,7 +91,13 @@ img {
     text-align: center;
 }
 
-.contact input,
+.form-main{
+    align-items: center;
+    text-align: center;
+    color:#8a3d3d;
+}
+
+.content-main input,
 .contact textarea {
     display: block;
     margin: 10px auto;
@@ -93,7 +105,7 @@ img {
     width: 300px;
 }
 
-.contact button {
+.content-main button{
     background-color: #000;
     color: #fff;
     padding: 10px 20px;
@@ -101,7 +113,7 @@ img {
     cursor: pointer;
 }
 
-.sticky-button {
+.sticky-button{
     position: absolute;
     top: 45px;
     right: 20px;
@@ -120,4 +132,84 @@ img {
     justify-content: center;
     column-gap: 30px;
     row-gap: 30px;
+    min-height: 50vh;
+     gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center; 
+}
+
+.form-main input,
+.form-main textarea{
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 300px;
+}
+
+.form-main button{
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  align-items: center;
+  text-align: center;
+}
+
+.form-main{
+    padding: 50px;
+    text-align: center;
+}
+
+.form-main h5{
+    font-size: 24px;
+}
+
+.form-main input, .form-main textarea{
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 300px;
+}
+
+.form-main {
+    text-align: center;
+    margin-top: 50px;
+}
+
+h5 {
+    color: #8a3d3d
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    justify-content: center; 
+    text-align: center;
+}
+
+input[type="text"],
+textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    border-color: purple;
+    outline: none;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: purple;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }

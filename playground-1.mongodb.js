@@ -1,81 +1,150 @@
 //Código para criar uma nova collection
-use("patissier");
+use("portfolio");
 db.dropDatabase()
-use("patissier");
-db.createCollection("cake");
+use("portfolio");
+db.createCollection("projetos");
 
 //Inserindo dados
-db.cake.insertOne(
+db.projetos.insertOne(
     {_id:1,
-        nome:"Bolo de Cenoura",
-        peso:"1kg", 
-        preco:60.00,
-        ingredientes:"cenouras, ovos, oleo, açucar, farinha de trigo, fermento em pó"}
+        título:"A Dança das Cores",
+        data:"22/07/2022", 
+        local:"Parque Sucurira",
+        modelo:"Ana Alice Oliveira da Silva"}
 );
-db.cake.insertOne(
+db.projetos.insertOne(
     {_id:2,
-        nome:"Bolo de Chocolate",
-        peso:"1.800kg", 
-        preco:45.00,
-        ingredientes:"achocolatado em pó, ovos, oleo, açucar, farinha de trigo, fermento em pó"}
+        título:"Sorriso & Mágia",
+        data:"22/07/2022", 
+        local:"Parque Sucurira",
+        modelo:"Ana Alice Oliveira da Silva"}
 );
-db.cake.insertOne(
+db.projetos.insertOne(
     {_id:3,
-        nome:"Red Velvet",
-        peso:"2.800kg", 
-        preco:180.00,
-        ingredientes:"corante vermelho, ovos, manteiga, açucar, farinha de trigo, fermento em pó"}
+        título:"Em Sintonia com a Natureza",
+        data:"22/07/2022", 
+        local:"Parque Sucurira",
+        modelo:"Ana Alice Oliveira da Silva"}
 );
-db.cake.insertOne(
+db.projetos.insertOne(
     {_id:4,
-        nome:"Bolo de Limão",
-        peso:"2kg", 
-        preco:69.00,
-        ingredientes:"achocolatado em pó, ovos, oleo, açucar, farinha de trigo, fermento em pó"}
+        título:"Reflexos do Amor",
+        data:"22/07/2022", 
+        local:"Parque Sucurira",
+        modelo:"Ana Alice Oliveira da Silva"}
+);
+db.projetos.insertOne(
+    {_id:5,
+        título:"Cores Vibrantes",
+        data:"22/07/2022", 
+        local:"Parque Sucurira",
+        modelo:"Ana Alice Oliveira da Silva"}
+);
+db.projetos.insertOne(
+    {_id:6,
+        título:"Horizonte Calmo",
+        data:"22/07/2022", 
+        local:"Parque Sucurira",
+        modelo:"Ana Alice Oliveira da Silva"}
+);
+db.projetos.insertOne(
+    {_id:7,
+        título:"O Encanto",
+        data:"22/07/2022", 
+        local:"Parque Sucurira",
+        modelo:"Ana Alice Oliveira da Silva"}
+);
+db.projetos.insertOne(
+    {_id:8,
+        título:"Reflexões da Alma",
+        data:"22/07/2022", 
+        local:"Parque Sucurira",
+        modelo:"Ana Alice Oliveira da Silva"}
+);
+db.projetos.insertOne(
+    {_id:9,
+        título:"Olhar",
+        data:"22/07/2022", 
+        local:"Parque Sucurira",
+        modelo:"Ana Alice Oliveira da Silva"}
+);
+db.projetos.insertOne(
+    {_id:10,
+        título:"Refúgio Verde",
+        data:"22/07/2022", 
+        local:"Parque Sucurira",
+        modelo:"Ana Alice Oliveira da Silva"}
+);
+db.projetos.insertOne(
+    {_id:11,
+        título:"Alturas",
+        data:"22/07/2022", 
+        local:"Parque Sucurira",
+        modelo:"Ana Alice Oliveira da Silva"}
+);
+db.projetos.insertOne(
+    {_id:12,
+        título:"Essência",
+        data:"22/07/2022", 
+        local:"Parque Sucurira",
+        modelo:"Ana Alice Oliveira da Silva"}
+);
+db.projetos.insertOne(
+    {_id:13,
+        título:"Entre Árvores",
+        data:"22/07/2022", 
+        local:"Parque Sucurira",
+        modelo:"Ana Alice Oliveira da Silva"}
+);
+db.projetos.insertOne(
+    {_id:14,
+        título:"O Amor em suas mãos",
+        data:"22/07/2022", 
+        local:"Parque Sucurira",
+        modelo:"Ana Alice Oliveira da Silva"}
 );
 
+//Excluindo o document projetos com _id = 1
+db.projetos.deleteOne({_id: 1});
 
-//Excluindo o document cake com _id = 1
-db.cake.deleteOne({_id: 1});
+//Listando o título e a data de todos os projetos
+db.projetos.find({}, 
+    {título: "A Dança das Cores", data: "22/07/2022"});
+db.projetos.find({}, 
+    {título: "Sorriso & Mágia", data: "22/07/2022"});
+db.projetos.find({}, 
+    {título: "Em Sintonia com a Natureza", data: "22/07/2022"});
+db.projetos.find({}, 
+    {título: "Reflexos do Amor", data: "22/07/2022"});
+db.projetos.find({},
+    {título: "Cores Vibrantes", data: "22/07/2022"});
 
-//Listando o nome e o preço de todos os bolos
-db.cake.find({}, 
-    {nome: "Bolo de Cenoura", preco: 60.00});
-db.cake.find({}, 
-    {nome: "Bolo de Chocolate", preco: 45.00});
-db.cake.find({}, 
-    {nome: "Red Velvet", preco: 180.00});
-db.cake.find({}, 
-    {nome: "Bolo de Limão", preco: 69.00});
-db.cake.find({},
-    {nome: "Bolo de Morango", preco: 142.50});
+//Listando título e a data de todos os projetos com a data 
+db.projetos.find({data: { $lte: 70 }}, {título: "A Dança das cores", data: "22/07/2022"});
+db.projetos.find({data: { $lte: 70 }}, {título: "Sorriso & Mágia", data: "22/07/2022"});
+db.projetos.find({data: { $lte: 70 }}, {título: "Red Velvet", data: "22/07/2022"});
+db.projetos.find({data: { $lte: 70 }}, {título: "Reflexos do Amor", data: "22/07/2022"});
+db.projetos.find({data: { $lte: 70 }}, {título: "Bolo de Morango", data: "22/07/2022"});
 
-//Listando nome e o preço de todos os bolos com o preço menor ou igual a 70
-db.cake.find({preco: { $lte: 70 }}, {nome: "Bolo de Cenoura", preco: 60.00});
-db.cake.find({preco: { $lte: 70 }}, {nome: "Bolo de Chocolate", preco: 45.00});
-db.cake.find({preco: { $lte: 70 }}, {nome: "Red Velvet", preco: 180.00});
-db.cake.find({preco: { $lte: 70 }}, {nome: "bolo de Limão", preco: 69.00});
-db.cake.find({preco: { $lte: 70 }}, {nome: "Bolo de Morango", preco: 142.50});
-
-//Consulta que muda o nome, peso e acrescenta 1 ingrediente no bolo _id = 2. (Usando update)
-db.cakes.updateOne({_id: 2},{
+//Consulta que muda o título, data e acrescenta 1 local no projeto _id = 2. (Usando update)
+db.projetos.updateOne({_id: 2},{
     $set:{
-        nome: "Bolo de Chocolate",
-        peso: "1.800kg",
-        ingredientes:{
-            ...this.ingredientes,
-            "ovos": 10
+        título: "Sorriso & Mágia",
+        data: "22/07/2022",
+        local:{
+            ...this.local,
+            "Centro da cidade": 10
         }
     }
 });
 
-//Código para criar update modificando 1 ingrediente de um bolo para ovos e quantidade = "3 unidades"
-db.cakes.updateOne({_id: 2},{
+//Código para criar update modificando 1 local de um projeto para Centro da cidade e Horário = "07:30h"
+db.projetos.updateOne({_id: 2},{
     $set:{
-        ingredientes:{
-            "ovos":{
+        local:{
+            "Centro da cidade":{
                 $set:{
-                    quantidade: "3"
+                    horário: "07:30h"
                 }
             }
         }
