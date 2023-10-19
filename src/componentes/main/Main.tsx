@@ -139,18 +139,6 @@ function mudaTexto(e:React.ChangeEvent<HTMLInputElement>){
                     />
                     )
                 }
-
-<main className='form-main'>
-  <h5>Entre em Contato</h5>
-  <form>
-  <input className='Nome' type="text" placeholder='Nome'/>
-  <input className="Email" type="text" placeholder="Email"/>
-  <textarea placeholder="Mensagem"/>
-  <button type="submit">Enviar
-  </button>
-  </form>
-  </main>
-
       </main>
     </>
   );
