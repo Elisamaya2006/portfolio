@@ -170,7 +170,6 @@ button {
   
   .form-container .form-submit-btn:hover {
     background-color: #fff;
-    border-color: purple;
     transition: 0.5s;
     color: purple;
   }
