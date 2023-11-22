@@ -1,16 +1,17 @@
-import './Projeto.css'
+import './Filme.css'
 
-type MainProps={
+type FilmeProps={
     titulo:string,
     sinopse:string,
     imagem:string
 }
 
-export default function Projeto(props:MainProps){
+export default function Filme(props:FilmeProps){
     return(
         <div className="filme_content">
-            <div className="foto_main"></div>
-            <img src={props.imagem} alt=""/>
+            <div className="foto_filme">
+                <img src={props.imagem} alt=""/>
+            </div>
             <div className="texto_foto">
                 <h1>{props.titulo}</h1>
                 <p className="sinopse">
