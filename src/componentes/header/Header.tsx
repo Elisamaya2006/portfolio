@@ -1,40 +1,28 @@
 import './Header.css'
+import { Link } from 'react-router-dom'
 function Header(){
-    const texto = "Elisamaya"
-    function mudaTexto(){
-        texto = "Elisamaya"
-    }
     return(
-        <>
         <header>
             <div>
-                logo
+                <Link to="/">Logo</Link>
             </div>
             <nav>
                 <ul>
                     <li>
-                        <input className="barradepesquisa" type="text" />
+                        <Link to="/">Página Inicial</Link>
                     </li>
                     <li>
-                        <a href="#">Página inicial</a>
+                        <Link to="/sobre">Sobre</Link>
                     </li>
                     <li>
-                        <a href="#">Sobre</a>
+                        <Link to="/noticias">Notícias</Link>
                     </li>
                     <li>
-                        <a href="#">Notícias</a>
-                    </li>
-                    <li>
-                        <a href="#">Contato</a>
+                        <Link to="/contato">Contato</Link>
                     </li>
                 </ul>
             </nav>
         </header>
-        <div>
-            pesquisa
-            <p className='texto_digitado' >pesquisa: {texto}</p>
-        </div>
-        </>
     )
 }
 export default Header

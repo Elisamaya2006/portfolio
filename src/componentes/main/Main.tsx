@@ -8,6 +8,7 @@ type FilmesType = {
     sinopse:string,
     imagem:string
 }
+
 export default function Main() {
   const [texto, setTexto] = useState("");
   const [filmes, setFilmes] = useState<FilmesType[]>([]);
@@ -33,7 +34,6 @@ export default function Main() {
 
     fetchMovies();
   }, []);
-
   if (carregando) return "Aguarde o Carregando...";
   if (erro) return "Ops... Erro ao encontrar o seu filme!";
   function handleInputChange(e: React.ChangeEvent<HTMLInputElement>) {

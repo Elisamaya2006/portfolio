@@ -3,7 +3,20 @@ footer{
     padding: 50px;
 }
 
+h1{
+    color: #8a3d3d;
+}
+
 img{
-    width: 300px;
+    width: 200px;
     height: auto;
+    align-items: left;
+    text-align: left;
+}
+
+footer {
+    background-color: #FFDAB9;
+    color: black;
+    padding: 10px;
+    text-align: center;
 }
